@@ -55,7 +55,7 @@ best_fasts = rscv.best_params_['best_estimator']
 
 # Compare best estimator to baselines on test data...
 scores, spreds, tgt_preds = best_fasts.compare_to_baselines(
-    y_train, y_test, season=7, fh=fh, bar_plot=True
+    y_train, y_test, season=12, fh=fh, bar_plot=True
 )
 ```
 
