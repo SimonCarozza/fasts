@@ -1,7 +1,7 @@
 # fasts
  Fast automatic time series forecasting
 
- **fasts** is a lightweight toy-tool to forecast future valus of time series with a trend.
+ **fasts** is a lightweight toy-tool to forecast future values of time series with a trend.
 
 ## How to use fasts
 
@@ -57,6 +57,14 @@ best_fasts = rscv.best_params_['best_estimator']
 scores, spreds, tgt_preds = best_fasts.compare_to_baselines(
     y_train, y_test, season=12, fh=fh, bar_plot=True
 )
+
+us.plot_forecasts(
+    passengers[:-fh],
+    tgt_preds[tgt_preds > 0].fillna(0),
+    passengers.index, 
+    y_test=passengers[-fh:],
+    simple_preds=spreds,
+    return_pred_int=True)
 ```
 
  The idea behind **fasts** is to avoid the hassle of analyzing ACF and PACF plots and detrending data. This doesn't mean you should skip a thorough time series analysis, which can help yu craft better models though. 
