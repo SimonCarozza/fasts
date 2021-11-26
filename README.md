@@ -15,7 +15,8 @@ from fasts import valid as vd
 from fasts import utils as us
 from fasts.datasets import load_data
 
-fh=test_size=28
+# set a forecast horizon and size of test data
+fh=test_size=24
 
 passengers = load_data("passengers.csv")
 
