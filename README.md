@@ -1,7 +1,7 @@
 # fasts
  Fast automatic time series forecasting
 
- **fasts** is a lightweight toy-tool to make forecasts of time series with a trend.
+ **fasts** is a lightweight toy-tool to forecast future valus of time series with a trend.
 
 ## How to use fasts
 
