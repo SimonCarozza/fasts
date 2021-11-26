@@ -17,9 +17,9 @@ from fasts.datasets import load_data
 
 fh=test_size=28
 
-posts = load_data("passengers.csv")
+passengers = load_data("passengers.csv")
 
-X, y = us.embed_to_X_y(pd.Series(posts), n_lags=21, name='posts')
+X, y = us.embed_to_X_y(pd.Series(passengers), n_lags=21, name='passengers')
 
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=test_size, random_state=42, shuffle=False)
@@ -50,13 +50,14 @@ rscv = vd.TSRandomizedSearchCV(
 )
 
 rscv.fit(X_train, y_train)
-
 best_fasts = rscv.best_params_['best_estimator']
 
 # Compare best estimator to baselines on test data...
 scores, spreds, tgt_preds = best_fasts.compare_to_baselines(
     y_train, y_test, season=12, fh=fh, bar_plot=True
 )
+
+# eventually print 'scores'
 
 us.plot_forecasts(
     passengers[:-fh],
