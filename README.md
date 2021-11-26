@@ -68,7 +68,7 @@ us.plot_forecasts(
     return_pred_int=True)
 ```
 
- The idea behind **fasts** is to avoid the hassle of analyzing ACF and PACF plots and detrending data. This doesn't mean you should skip a thorough time series analysis, which can help yu craft better models though. 
+ The idea behind **fasts** is to avoid the hassle of analyzing ACF and PACF plots and detrending data. This doesn't mean you should skip a thorough time series analysis, which can help you craft better models though. 
 
  I tried to keep a certain level of compatibility with `scikit-learn` to make `fasts` more appetible to users familiar with that library, but full compatibility requires further development on my part.
 
