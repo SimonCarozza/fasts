@@ -16,9 +16,6 @@ warnings.filterwarnings('ignore')
 # from matplotlib.pyplot import rcParams
 # rcParams['figure.figsize'] = 12, 6
 
-import sys
-# sys.path.append("C:\\PROGRAMMAZIONE\\Sviluppo\\AI\\MachineLearning\\timeseries\\projects\\fasts")
-
 from fasts import estimators as es
 from fasts import valid as vd
 from fasts import utils as us
@@ -26,8 +23,6 @@ from fasts.datasets import load_data
 
 print()
 print()
-
-# if __name__ == '__main__':
 
 print("*** Forecasts of Medium Posts using FASTSRegressor...")
 print("... with quantile regression for prediction intervals")
